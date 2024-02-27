@@ -1,8 +1,7 @@
 # webdriverio-appium
 
 This project is part of a course about automated tests to Android mobile application.
-Made with these tests frameworks: Appium, WebDriveIO and BrowserStack.
-Also have CI/CD integration with GitHub Actions to run the test suite.
+Made with these tests frameworks: Appium, WebDriveIO and run locally
 
 ## Test report
 
