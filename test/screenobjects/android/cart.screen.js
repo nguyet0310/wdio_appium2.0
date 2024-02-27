@@ -1,9 +1,11 @@
 class CartScreen {
-    get checkoutBtn(){
+    get checkoutBtn() {
         return $('~test-CHECKOUT');
     }
-
-    async clickCheckoutBtn(){
+    /**
+     * Click on checkout button
+     */
+    async clickCheckoutBtn() {
         await this.checkoutBtn.click()
     }
 }

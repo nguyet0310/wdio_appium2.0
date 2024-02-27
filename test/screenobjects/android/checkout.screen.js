@@ -1,51 +1,61 @@
 class CheckoutScreen {
-    get firstnameTxt(){
+    get firstnameTxt() {
         return $('~test-First Name');
     }
-    get lastnameTxt(){
+    get lastnameTxt() {
         return $('~test-Last Name');
     }
 
-    get zipCodeTxt(){
+    get zipCodeTxt() {
         return $('~test-Zip/Postal Code');
     }
 
-    get continueBtn(){
+    get continueBtn() {
         return $('~test-CONTINUE');
-        
+
     }
-    get finishBtn(){
+    get finishBtn() {
         return $('~test-FINISH');
-        
+
     }
-    get checkoutSuccessLabel(){
+    get checkoutSuccessLabel() {
         return $('//android.widget.TextView[@text="THANK YOU FOR YOU ORDER"]');
     }
+    /**
+     * Fill firstname of address screen 
+     * @param {} firstname 
+     */
+    async fillFistname(firstname) {
+        try {
+            (await this.firstnameTxt).setValue(firstname)
 
-    async fillFistname(firstname){
-    try{
-        (await this.firstnameTxt).setValue(firstname)
-    
-    } catch (error) {
-        console.error('Error in fillCheckoutAddress:', error);
+        } catch (error) {
+            console.error('Error in fillCheckoutAddress:', error);
+        }
     }
+    /**
+     * Fill lastname of address screen 
+     * @param {*} lastname 
+     */
+    async fillLastname(lastname) {
+
+        (await this.lastnameTxt).setValue(lastname)
     }
-    async fillLastname(lastname){
+    /**
+     * Fill zipcode of address screen
+     * @param {*} zipcode 
+     */
+    async fillZipcode(zipcode) {
 
-        (await this.lastnameTxt).setValue(lastname) 
+        (await this.zipCodeTxt).setValue(zipcode)
     }
 
-    async fillZipcode(zipcode){
 
-        (await this.zipCodeTxt).setValue(zipcode) 
-    }
-
-
-    async clickContinueBtn(){
+    async clickContinueBtn() {
         await this.continueBtn.click()
     }
 
-    async clickFinishBtn(){
+    async clickFinishBtn() {
         await this.finishBtn.click()
     }
 }
