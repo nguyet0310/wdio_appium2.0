@@ -11,10 +11,6 @@ Also have CI/CD integration with GitHub Actions to run the test suite.
 Run: `npx wdio`.
 
 
-## Running on GitHub Actions
-
-Merge a PR or trigger it manually. In this case, you don't need to config the .env file.
-
 ## Test Report
 
 You can see the test report running locally: `npm run report`.
